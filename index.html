@@ -1,0 +1,63 @@
+<head>   
+<script>
+    var __cbSdkHost = "https://sg13.cb-qa-site4.com/";
+    var __cbSdkSettings={'cbq':{destinations:[{name:"cloudbridge"},],
+    "host":__cbSdkHost,"globalVar":"cbq",}};
+    !function(a,h,e,v,n,t,s)
+      {if(a.cbq)return;n=a.cbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!a._cbq)a._cbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=h.createElement(e);t.async=!0;
+      t.src=v;s=h.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      "https://sg13.cb-qa-site4.com/"+'sdk/capig-events.js');
+    cbq('init', "885289407605679875");
+    cbq('loadConfig', "885289407605679875");
+    cbq('track', 'PageView');
+    </script>
+    
+<meta name="facebook-domain-verification" content="qowwrhpyni79cf2pms3zixyrxoh3b4" />
+<title>pixel test page</title>
+</head>
+<body>
+    <h2>pixel test page</h2>
+    <div>
+    <ul>
+        <li><button id="addToWishlistButton" type="button">Add to Wishlist</button></li>
+        <li><button id="addToCartButton" type="button">Add to Cart</button></li>
+        <li><button id="checkoutButton" type="button">Check Out</button></li>
+        <li><button id="purchaseButton" type="button">Purchase</button></li>
+        <li><button id="subcribeButton" type="button">Subscribe</button></li>
+        <li><button id="registrationButton" type="button">Registration</button></li>
+    </ul>
+    </div>
+
+<script type="text/javascript">
+document.getElementById('addToWishlistButton').addEventListener('click', function() {
+  cbq('track', 'AddToWishlist');
+}, false);
+
+document.getElementById('addToCartButton').addEventListener('click', function() {
+  cbq('track', 'AddToCart');
+}, false);
+
+document.getElementById('checkoutButton').addEventListener('click', function() {
+  cbq('track', 'InitiateCheckout');
+}, false);
+
+document.getElementById('purchaseButton').addEventListener('click', function() {
+  cbq('track', 'Purchase', {
+    value: 100,
+    currency: 'USD',
+  });
+}, false);
+
+document.getElementById('subcribeButton').addEventListener('click', function() {
+  cbq('track', 'Subscribe');
+}, false);
+
+document.getElementById('registrationButton').addEventListener('click', function() {
+  cbq('track', 'CompleteRegistration');
+}, false);
+</script>
+</body>
